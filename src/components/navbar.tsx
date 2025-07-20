@@ -41,7 +41,7 @@ export default function Navbar() {
           <Tooltip>
             <TooltipTrigger asChild>
               <Link
-                href={`https://mail.google.com/mail/?view=cm&fs=1&to=${DATA.contact.email}`}
+                href={`mailto:${DATA.contact.email}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={cn(
