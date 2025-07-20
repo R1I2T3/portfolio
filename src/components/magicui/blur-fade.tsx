@@ -25,10 +25,11 @@ const BlurFade = ({
   delay = 0,
   yOffset = 6,
   inView = false,
-  inViewMargin = "-50px",
+  inViewMargin = "0px 0px -50px 0px",
   blur = "6px",
 }: BlurFadeProps) => {
   const ref = useRef(null);
+  // @ts-expect-error: this is deliberately not typed
   const inViewResult = useInView(ref, { once: true, margin: inViewMargin });
   const isInView = !inView || inViewResult;
   const defaultVariants: Variants = {
